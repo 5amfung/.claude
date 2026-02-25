@@ -14,6 +14,7 @@ shell-snapshots/
 stats-cache.json
 tasks/
 todos/
+mcp-needs-auth-cache.json
 
 # Local overrides (Claude auto-creates these)
 settings.local.json
