@@ -1,4 +1,7 @@
 {
+  "companyAnnouncements": [
+    "Woohooo 🚀🛸🪐👽"
+  ],
   "statusLine": {
     "type": "command",
     "command": "sh -c '[ -f .claude/statusline-command.sh ] && sh .claude/statusline-command.sh || sh ~/.claude/statusline-command.sh'"
@@ -12,5 +15,14 @@
     "skill-creator@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true
+  },
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./secrets/**)"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
   }
 }
