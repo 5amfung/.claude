@@ -5,7 +5,8 @@
   "permissions": {
     "deny": [
       "Read(./.env)",
-      "Read(./secrets/**)"
+      "Read(./secrets/**)",
+      "Write(./.git/**)"
     ]
   },
   "statusLine": {
