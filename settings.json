@@ -12,10 +12,16 @@
       "Bash(git add:*)",
       "Bash(git branch:*)",
       "Bash(git checkout:*)",
+      "Bash(git log:*",
+      "Bash(git stash:*",
+      "Bash(git fetch:*",
       "Bash(ripgrep:*)",
       "Bash(grep:*)",
       "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
       "Bash(sed:*)",
+      "Bash(mkdir:*)",
       "WebSearch",
       "WebFetch",
       "mcp__plugin_context7_context7__resolve-library-id",
@@ -27,7 +33,8 @@
       "Read(./.local.env)",
       "Read(./secrets/**)",
       "Read(~/.zshrc)",
-      "Write(./.git/**)"
+      "Write(./.git/**)",
+      "Bash(git push:*)"
     ]
   },
   "statusLine": {
