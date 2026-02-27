@@ -3,9 +3,37 @@
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
   },
   "permissions": {
+    "allow": [
+      "Bash(bun run *)",
+      "Bash(bun install)",
+      "Bash(pnpm install)",
+      "Bash(npm install)",
+      "Bash(node *)",
+      "Bash(git add *)",
+      "Bash(git branch *)",
+      "Bach(git checkout *)"
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(sed:*)",
+      "WebSearch",
+      "WebFetch",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "mcp__serena__activate_project",
+      "mcp__serena__check_onboarding_performed",
+      "mcp__serena__onboarding",
+      "mcp__serena__list_dir",
+      "mcp__serena__write_memory",
+      "mcp__serena__find_symbol",
+      "mcp__serena__search_for_pattern",
+      "mcp__serena__find_file",
+      "mcp__serena__get_symbols_overview",
+      "mcp__serena__get_current_config"
+    ],
     "deny": [
       "Read(./.env)",
       "Read(./secrets/**)",
+      "Read(~/.zshrc)",
       "Write(./.git/**)"
     ]
   },
