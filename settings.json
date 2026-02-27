@@ -11,7 +11,7 @@
       "Bash(node *)",
       "Bash(git add *)",
       "Bash(git branch *)",
-      "Bach(git checkout *)"
+      "Bach(git checkout *)",
       "Bash(grep:*)",
       "Bash(find:*)",
       "Bash(sed:*)",
