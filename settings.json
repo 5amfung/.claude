@@ -56,8 +56,8 @@
     "skill-creator@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
-    "firecrawl@claude-plugins-official": true,
-    "stripe@claude-plugins-official": true
+    "stripe@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
   },
   "companyAnnouncements": [
     "🚀🛸🪐👽 woohoo ",
