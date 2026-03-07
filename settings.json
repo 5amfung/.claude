@@ -12,6 +12,7 @@
       "Bash(git add:*)",
       "Bash(git branch:*)",
       "Bash(git checkout:*)",
+      "Bash(git commit:*",
       "Bash(git log:*",
       "Bash(git stash:*",
       "Bash(git fetch:*",
@@ -57,7 +58,9 @@
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "stripe@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "serena@claude-plugins-official": true
   },
   "companyAnnouncements": [
     "🚀🛸🪐👽 woohoo ",
