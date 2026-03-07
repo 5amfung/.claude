@@ -4,9 +4,9 @@
   },
   "permissions": {
     "allow": [
-      "Bash(bun run:*)",
-      "Bash(pnpm run:*)",
-      "Bash(npm run:*)",
+      "Bash(bun:*)",
+      "Bash(pnpm:*)",
+      "Bash(npm:*)",
       "Bash(vite:*)",
       "Bash(node:*)",
       "Bash(git add:*)",
