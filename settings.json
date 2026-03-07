@@ -58,9 +58,12 @@
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "stripe@claude-plugins-official": true,
+    "serena@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "serena@claude-plugins-official": true
+    "claude-code-setup@claude-plugins-official": true,
+    "explanatory-output-style@claude-plugins-official": true,
+    "greptile@claude-plugins-official": true
   },
   "companyAnnouncements": [
     "🚀🛸🪐👽 woohoo ",
