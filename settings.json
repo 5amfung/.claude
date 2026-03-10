@@ -23,6 +23,7 @@
       "Bash(cat:*)",
       "Bash(sed:*)",
       "Bash(mkdir:*)",
+      "Bash(npx tsc:*)",
       "Bash(head:*)",
       "Bash(tail:*)",
       "Bash(test:*)",
