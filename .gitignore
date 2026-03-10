@@ -5,6 +5,7 @@ debug/
 file-history/
 history.jsonl
 ide/
+image-cache/
 paste-cache/
 plans/
 plugins/
@@ -26,3 +27,4 @@ CLAUDE.local.md
 .git
 .gitignore  # if a plugin creates one
 node_modules/
+
