@@ -16,6 +16,7 @@ stats-cache.json
 tasks/
 todos/
 mcp-needs-auth-cache.json
+security_warnings_state_default.json
 
 # Local overrides (Claude auto-creates these)
 settings.local.json
