@@ -1,5 +1,3 @@
-# Workflow Orchestration
-
 ## Workflow Orchestration
 
 1. **Plan Mode Default**
@@ -49,5 +47,63 @@
 ## Core Principles
 
 - **Simplicity First**: Make every change as simple as possible. Impact minimal code.
-- **No Laziness**: Find root causes. No temporary fixes. Senior developer standards.
+- **No Laziness**: Find root causes. No temporary fixes. Senior staff developer standards.
 - **Minimal Impact**: Changes should only touch what's necessary. Avoid introducing bugs.
+- **Write Clean Code**: Follow clean code guideline and write easy to understand code.
+
+## Clean Code Guideline
+
+### Constants Over Magic Numbers
+
+- Replace hard-coded values with named constants.
+- Use descriptive constant names that explain the value's purpose.
+- Keep constants at the top of the file or in a dedicated constants file.
+
+### Meaningful Names
+
+- Variables, functions, and classes should reveal their purpose.
+- Names should explain why something exists and how it's used.
+- Avoid abbreviations unless they're universally understood.
+
+### Smart Comments
+
+- Don't comment on what the code does - make the code self-documenting.
+- Use comments to explain why something is done a certain way.
+- Document APIs, complex algorithms, and non-obvious side effects.
+- Always end comment with a period.
+
+### Single Responsibility
+
+- Each function should do exactly one thing.
+- Functions should be small and focused.
+- If a function needs a comment to explain what it does, it should be split.
+
+### DRY (Don't Repeat Yourself)
+
+- Extract repeated code into reusable functions.
+- Share common logic through proper abstraction.
+- Maintain single sources of truth.
+
+### Clean Structure
+
+- Keep related code together.
+- Organize code in a logical hierarchy.
+- Use consistent file and folder naming conventions.
+
+### Encapsulation
+
+- Hide implementation details.
+- Expose clear interfaces.
+- Move nested conditionals into well-named functions.
+
+### Code Quality Maintenance
+
+- Refactor continuously.
+- Fix technical debt early.
+- Leave code cleaner than you found it.
+
+### Testing
+
+- Write tests before fixing bugs.
+- Keep tests readable and maintainable.
+- Test edge cases and error conditions.
