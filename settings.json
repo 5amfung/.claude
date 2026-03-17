@@ -64,7 +64,10 @@
     "filesystem": {
       "denyRead": ["~/"],
       "allowRead": ["."],
-      "allowWrite": ["//tmp"]
+      "allowWrite": [
+        "//tmp",
+        "."
+      ]
     },
     "network": {
       "allowUnixSockets": [],
