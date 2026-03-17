@@ -56,6 +56,25 @@
       "Bash(git tag:*)"
     ]
   },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "excludedCommands": [],
+    "filesystem": {
+      "denyRead": ["~/"],
+      "allowRead": ["."],
+      "allowWrite": ["//tmp"]
+    },
+    "network": {
+      "allowUnixSockets": [],
+      "allowAllUnixSockets": false,
+      "allowLocalBinding": false,
+      "allowedDomains": [],
+      "httpProxyPort": null,
+      "socksProxyPort": null
+    },
+    "enableWeakerNestedSandbox": false
+  },
   "statusLine": {
     "type": "command",
     "command": "sh -c '[ -f .claude/statusline-command.sh ] && sh .claude/statusline-command.sh || sh ~/.claude/statusline-command.sh'"
@@ -90,5 +109,9 @@
     "🎲🌀 Chaos dice rolled: jackpot reality incoming! 💰",
     "🌈💡 Prism of pure potential cracking open... dive in! 🏊‍♂️",
     "☕️ Midnight rocket fuel activated: dream big or go home! 🏠"
-  ]
+  ],
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  }
 }
