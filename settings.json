@@ -17,6 +17,7 @@
       "Bash(git rm:*)",
       "Bash(git stash:*)",
       "Bash(git status:*)",
+      "Bash(git worktree:*)",
       "Bash(gh pr:*)",
       "Bash(gh search:*)",
       "Bash(gh status:*)",
