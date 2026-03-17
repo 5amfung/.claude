@@ -69,8 +69,23 @@
     "network": {
       "allowUnixSockets": [],
       "allowAllUnixSockets": false,
-      "allowLocalBinding": false,
-      "allowedDomains": [],
+      "allowLocalBinding": true,
+      "allowedDomains": [ 
+        "github.com",
+        "*.npmjs.org", 
+        "registry.yarnpkg.com",
+        "tanstack.com",
+        "react.dev",
+        "ui.shadcn.com",
+        "elevenlabs.io",
+        "neon.com",
+        "orm.drizzle.team",
+        "prettier.io",
+        "biomejs.dev",
+        "flutter.dev",
+        "dart.dev",
+        "*.claude.com"
+      ],
       "httpProxyPort": null,
       "socksProxyPort": null
     },
