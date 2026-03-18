@@ -6,6 +6,7 @@
     "allow": [
       "Bash(bun:*)",
       "Bash(cat:*)",
+      "Bash(echo:*)",
       "Bash(find:*)",
       "Bash(git add:*)",
       "Bash(git branch:*)",
@@ -18,6 +19,7 @@
       "Bash(git stash:*)",
       "Bash(git status:*)",
       "Bash(git worktree:*)",
+      "Bash(gh api:*)",
       "Bash(gh pr:*)",
       "Bash(gh search:*)",
       "Bash(gh status:*)",
@@ -87,7 +89,8 @@
         "biomejs.dev",
         "flutter.dev",
         "dart.dev",
-        "*.claude.com"
+        "*.claude.com",
+        "better-auth.com"
       ],
       "httpProxyPort": null,
       "socksProxyPort": null
