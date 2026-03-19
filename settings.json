@@ -39,6 +39,7 @@
       "Bash(tr:*)",
       "Bash(vite:*)",
       "Bash(wc:*)",
+      "Bash(which:*)",
       "ToolSearch",
       "WebFetch",
       "WebSearch",
@@ -92,6 +93,19 @@
       ]
     },
     "enableWeakerNestedSandbox": false
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude needs your approval\" with title \"Claude Code Permission\" sound name \"Glass\"' & afplay /System/Library/Sounds/Glass.aiff &"
+          }
+        ]
+      }
+    ]
   },
   "statusLine": {
     "type": "command",
