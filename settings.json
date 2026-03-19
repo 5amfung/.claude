@@ -11,6 +11,7 @@
       "Bash(git add:*)",
       "Bash(git branch:*)",
       "Bash(git checkout:*)",
+      "Bash(git clean:*)",
       "Bash(git commit:*)",
       "Bash(git fetch:*)",
       "Bash(git log:*)",
@@ -37,7 +38,7 @@
       "Bash(test:*)",
       "Bash(tr:*)",
       "Bash(vite:*)",
-      "Bash(echo:*)",
+      "Bash(wc:*)",
       "ToolSearch",
       "WebFetch",
       "WebSearch",
@@ -66,10 +67,7 @@
     "filesystem": {
       "denyRead": ["~/"],
       "allowRead": ["."],
-      "allowWrite": [
-        "//tmp",
-        "."
-      ]
+      "allowWrite": ["//tmp", "."]
     },
     "network": {
       "allowUnixSockets": [],
