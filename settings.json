@@ -91,9 +91,7 @@
         "dart.dev",
         "*.claude.com",
         "better-auth.com"
-      ],
-      "httpProxyPort": null,
-      "socksProxyPort": null
+      ]
     },
     "enableWeakerNestedSandbox": false
   },
