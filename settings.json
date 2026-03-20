@@ -8,6 +8,7 @@
       "Bash(cat:*)",
       "Bash(echo:*)",
       "Bash(find:*)",
+      "Bash(for:*)",
       "Bash(git add:*)",
       "Bash(git branch:*)",
       "Bash(git checkout:*)",
