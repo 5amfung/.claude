@@ -18,6 +18,7 @@
       "Bash(git log:*)",
       "Bash(git mv:*)",
       "Bash(git rm:*)",
+      "Bash(git show:*)",
       "Bash(git stash:*)",
       "Bash(git status:*)",
       "Bash(git worktree:*)",
