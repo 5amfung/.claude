@@ -62,9 +62,7 @@
       "Read(./.local.env)",
       "Read(./secrets/**)",
       "Read(~/.zshrc)",
-      "Write(./.git/**)",
-      "Bash(git merge:*)",
-      "Bash(git tag:*)"
+      "Write(./.git/**)"
     ]
   },
   "sandbox": {
@@ -73,16 +71,22 @@
     "excludedCommands": [],
     "filesystem": {
       "denyRead": ["~/"],
-      "allowRead": ["."],
-      "allowWrite": ["//tmp", "."]
+      "allowRead": [
+        "~/.claude",
+        "."
+      ],
+      "allowWrite": [
+        "//tmp",
+        "."
+      ]
     },
     "network": {
       "allowUnixSockets": [],
       "allowAllUnixSockets": false,
       "allowLocalBinding": true,
-      "allowedDomains": [ 
+      "allowedDomains": [
         "github.com",
-        "*.npmjs.org", 
+        "*.npmjs.org",
         "registry.yarnpkg.com",
         "tanstack.com",
         "react.dev",
@@ -101,6 +105,17 @@
     "enableWeakerNestedSandbox": false
   },
   "hooks": {
+    "PermissionRequest": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ~/.claude/hooks/auto-approve-safe-commands.py"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "matcher": "permission_prompt",
@@ -115,7 +130,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "sh -c '[ -f .claude/statusline-command.sh ] && sh .claude/statusline-command.sh || sh ~/.claude/statusline-command.sh'"
+    "command": "sh -c '[ -f .claude/hooks/statusline-command.sh ] && sh .claude/hooks/statusline-command.sh || sh ~/.claude/hooks/statusline-command.sh'"
   },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
