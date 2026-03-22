@@ -32,7 +32,6 @@
       "Bash(mkdir:*)",
       "Bash(node:*)",
       "Bash(npm:*)",
-      "Bash(npx tsc:*)",
       "Bash(pnpm:*)",
       "Bash(ripgrep:*)",
       "Bash(sed:*)",
