@@ -69,7 +69,7 @@
     "autoAllowBashIfSandboxed": true,
     "excludedCommands": [],
     "filesystem": {
-      "denyRead": ["~/"],
+      "denyRead": [],
       "allowRead": [
         "~/.claude",
         "."
