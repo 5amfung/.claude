@@ -2,7 +2,7 @@
 
 0. **Git Worktrees**
     - Before creating a worktree or branch, ask the user for a meaningful name.
-    - Format: `feat/short-description`, `fix/short-description`, or `chore/short-description`.
+    - Format: `claude/short-description`.
     - Never auto-generate branch names without confirmation.
 1. **Plan Mode Default**
     - Use `superpower:brainstorm` skill (if available) or plan mode for ANY non-trivial task (3+ steps or architectural decisions)
