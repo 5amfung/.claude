@@ -88,7 +88,7 @@
       "allowAllUnixSockets": false,
       "allowLocalBinding": true,
       "allowedDomains": [
-        "github.com",
+        "*.github.com",
         "*.npmjs.org",
         "registry.yarnpkg.com",
         "tanstack.com",
