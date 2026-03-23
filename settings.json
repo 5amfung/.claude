@@ -2,17 +2,15 @@
   "env": {
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
   },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
-    "deny": [
-      "Read(./.env)",
-      "Read(./.local.env)",
-      "Read(./secrets/**)",
-      "Read(~/.zshrc)",
-      "Write(./.git/**)"
-    ],
     "allow": [
       "Bash(bun:*)",
       "Bash(cat:*)",
+      "Bash(cd:*)",
       "Bash(echo:*)",
       "Bash(find:*)",
       "Bash(for:*)",
@@ -24,6 +22,7 @@
       "Bash(git fetch:*)",
       "Bash(git log:*)",
       "Bash(git mv:*)",
+      "Bash(git push:*)",
       "Bash(git rm:*)",
       "Bash(git show:*)",
       "Bash(git stash:*)",
@@ -54,6 +53,7 @@
       "WebFetch",
       "WebSearch",
       "Write(//tmp/**)",
+      "mcp__mcp-registry__search_mcp_registry",
       "mcp__plugin_context7_context7__query-docs",
       "mcp__plugin_context7_context7__resolve-library-id",
       "mcp__plugin_serena_serena__activate_project",
@@ -65,40 +65,14 @@
       "mcp__plugin_serena_serena__read_file",
       "mcp__plugin_serena_serena__search_for_pattern",
       "mcp__plugin_serena_serena__write_memory"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.local.env)",
+      "Read(./secrets/**)",
+      "Read(~/.zshrc)",
+      "Write(./.git/**)"
     ]
-  },
-  "sandbox": {
-    "enabled": true,
-    "autoAllowBashIfSandboxed": true,
-    "excludedCommands": [],
-    "filesystem": {
-      "denyRead": [],
-      "allowRead": [
-        "~/.claude/",
-        "./"
-      ],
-      "allowWrite": [
-        "/tmp/",
-        "/private/tmp/",
-        "./"
-      ]
-    },
-    "network": {
-      "allowUnixSockets": [],
-      "allowAllUnixSockets": false,
-      "allowLocalBinding": true,
-      "allowedDomains": [
-        "*.github.com",
-        "*.githubusercontent.com",
-        "*.npmjs.org",
-        "*.yarnpkg.com",
-        "*.pypi.org",
-        "*.anthropic.com",
-        "*.amazonaws.com",
-        "*.googleapis.com"
-      ]
-    },
-    "enableWeakerNestedSandbox": false
   },
   "hooks": {
     "PermissionRequest": [
@@ -129,21 +103,51 @@
     "command": "sh -c '[ -f .claude/hooks/statusline-command.sh ] && sh .claude/hooks/statusline-command.sh || sh ~/.claude/hooks/statusline-command.sh'"
   },
   "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true,
-    "context7@claude-plugins-official": true,
-    "stripe@claude-plugins-official": true,
-    "serena@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "claude-code-setup@claude-plugins-official": true,
-    "explanatory-output-style@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
-    "plugin-dev@claude-plugins-official": true
+    "explanatory-output-style@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "network": {
+      "allowedDomains": [
+        "*.github.com",
+        "*.githubusercontent.com",
+        "*.npmjs.org",
+        "*.yarnpkg.com",
+        "*.pypi.org",
+        "*.anthropic.com",
+        "*.amazonaws.com",
+        "*.googleapis.com"
+      ],
+      "allowUnixSockets": [],
+      "allowAllUnixSockets": false,
+      "allowLocalBinding": true
+    },
+    "filesystem": {
+      "allowWrite": [
+        "/tmp/",
+        "/private/tmp/",
+        "./"
+      ],
+      "denyRead": [],
+      "allowRead": [
+        "~/.claude/",
+        "./"
+      ]
+    },
+    "enableWeakerNestedSandbox": false,
+    "excludedCommands": []
   },
   "companyAnnouncements": [
     "🚀🛸🪐👽 woohoo ",
@@ -159,9 +163,5 @@
     "🎲🌀 Chaos dice rolled: jackpot reality incoming! 💰",
     "🌈💡 Prism of pure potential cracking open... dive in! 🏊‍♂️",
     "☕️ Midnight rocket fuel activated: dream big or go home! 🏠"
-  ],
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  }
+  ]
 }
