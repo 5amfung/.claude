@@ -1,6 +1,8 @@
 {
   "env": {
-    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
+    "VERCEL_TELEMETRY_DISABLED": "1",
+    "RAILWAY_NO_TELEMETRY": "1"
   },
   "attribution": {
     "commit": "",
@@ -29,6 +31,7 @@
       "Bash(git status:*)",
       "Bash(git worktree:*)",
       "Bash(gh api:*)",
+      "Bash(gh issue:*)",
       "Bash(gh pr:*)",
       "Bash(gh search:*)",
       "Bash(gh status:*)",
@@ -55,16 +58,7 @@
       "Write(//tmp/**)",
       "mcp__mcp-registry__search_mcp_registry",
       "mcp__plugin_context7_context7__query-docs",
-      "mcp__plugin_context7_context7__resolve-library-id",
-      "mcp__plugin_serena_serena__activate_project",
-      "mcp__plugin_serena_serena__check_onboarding_performed",
-      "mcp__plugin_serena_serena__find_file",
-      "mcp__plugin_serena_serena__get_symbols_overview",
-      "mcp__plugin_serena_serena__list_dir",
-      "mcp__plugin_serena_serena__onboarding",
-      "mcp__plugin_serena_serena__read_file",
-      "mcp__plugin_serena_serena__search_for_pattern",
-      "mcp__plugin_serena_serena__write_memory"
+      "mcp__plugin_context7_context7__resolve-library-id"
     ],
     "deny": [
       "Read(./.env)",
@@ -112,10 +106,10 @@
     "security-guidance@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
-    "explanatory-output-style@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true
   },
+  "outputStyle": "Explanatory",
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
@@ -128,7 +122,9 @@
         "*.pypi.org",
         "*.anthropic.com",
         "*.amazonaws.com",
-        "*.googleapis.com"
+        "*.googleapis.com",
+        "*.context7.com",
+        "*.smithery.ai"
       ],
       "allowUnixSockets": [],
       "allowAllUnixSockets": false,
@@ -140,15 +136,22 @@
         "/private/tmp/",
         "./"
       ],
-      "denyRead": [],
+      "denyRead": [
+        "~/.npmrc",
+        "~/.config",
+        "~/.zshrc",
+        "~/.zshenv"
+      ],
       "allowRead": [
+        "~/.config/gh/",
         "~/.claude/",
         "./"
       ]
     },
-    "enableWeakerNestedSandbox": false,
+    "enableWeakerNetworkIsolation": true,
     "excludedCommands": []
   },
+  "effortLevel": "high",
   "companyAnnouncements": [
     "🚀🛸🪐👽 woohoo ",
     "🤡 What ya gonna build?",
@@ -163,5 +166,7 @@
     "🎲🌀 Chaos dice rolled: jackpot reality incoming! 💰",
     "🌈💡 Prism of pure potential cracking open... dive in! 🏊‍♂️",
     "☕️ Midnight rocket fuel activated: dream big or go home! 🏠"
-  ]
+  ],
+  "voiceEnabled": true,
+  "autoDreamEnabled": false
 }

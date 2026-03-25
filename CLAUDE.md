@@ -2,7 +2,7 @@
 
 0. **Git Worktrees**
     - Before creating a worktree or branch, ask the user for a meaningful name.
-    - Format: `claude/short-description`.
+    - Format: `claude-short-description`.
     - Never auto-generate branch names without confirmation.
 1. **Plan Mode Default**
     - Use `superpower:brainstorm` skill (if available) or plan mode for ANY non-trivial task (3+ steps or architectural decisions)
@@ -16,8 +16,7 @@
     - One track per subagent for focused execution
 3. **Self-Improvement Loop**
     - After ANY correction from the user, write rules for yourself that prevent the same mistake
-    - **Capture Lessons**: Update `.lessons.md` after corrections
-    - **Never** git commit `.lessons.md`.
+    - **Capture Lessons**: Update auto memory after corrections
     - Ruthlessly iterate on these lessons until mistake rate drops
     - Review lessons at session start for relevant project
 4. **Verification Before Done**
@@ -39,63 +38,14 @@
 ## Core Principles
 
 - **Simplicity First**: Make every change as simple as possible. Impact minimal code.
-- **No Laziness**: Find root causes. No temporary fixes. Senior staff developer standards.
+- **No Laziness**: Find root causes. No temporary, hacky fixes. Don't just patch things up.
 - **Minimal Impact**: Changes should only touch what's necessary. Avoid introducing bugs.
-- **Write Clean Code**: Follow clean code guideline and write easy to understand code.
+- **Write Clean Code**: Follow Clean Code guideline.
 
-## Clean Code Guideline
+## Command Execution Rules
 
-### Constants Over Magic Numbers
-
-- Replace hard-coded values with named constants.
-- Use descriptive constant names that explain the value's purpose.
-- Keep constants at the top of the file or in a dedicated constants file.
-
-### Meaningful Names
-
-- Variables, functions, and classes should reveal their purpose.
-- Names should explain why something exists and how it's used.
-- Avoid abbreviations unless they're universally understood.
-
-### Smart Comments
-
-- Don't comment on what the code does - make the code self-documenting.
-- Use comments to explain why something is done a certain way.
-- Document APIs, complex algorithms, and non-obvious side effects.
-- Always end comment with a period.
-
-### Single Responsibility
-
-- Each function should do exactly one thing.
-- Functions should be small and focused.
-- If a function needs a comment to explain what it does, it should be split.
-
-### DRY (Don't Repeat Yourself)
-
-- Extract repeated code into reusable functions.
-- Share common logic through proper abstraction.
-- Maintain single sources of truth.
-
-### Clean Structure
-
-- Keep related code together.
-- Organize code in a logical hierarchy.
-- Use consistent file and folder naming conventions.
-
-### Encapsulation
-
-- Hide implementation details.
-- Expose clear interfaces.
-- Move nested conditionals into well-named functions.
-
-### Code Quality Maintenance
-
-- Refactor continuously.
-- Fix technical debt early.
-- Leave code cleaner than you found it.
-
-### Testing
-
-- Write tests before fixing bugs.
-- Keep tests readable and maintainable.
-- Test edge cases and error conditions.
+- **Always run from the project root.** Never `cd` into subdirectories.
+- **Be consistent.** Use the same CLI tool and invocation pattern every time. Never mix `npx`/`pnpm exec`/direct paths for the same tool.
+- **Pre-approve CLIs**: Before executing a multi-step task, identify **all** CLI tools needed (`pnpm`, `git`, `node`, `find`, `python3`, etc.) and run a benign command for each (e.g., `--version`) to trigger permission approval upfront. Avoids and minimizes interruptions mid-task.
+- **Subagents follow the same rules.** Include these rules in subagent prompts.
+- **Use rg (ripgrep) over grep command** for performance gain.
