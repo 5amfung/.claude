@@ -29,4 +29,5 @@ CLAUDE.local.md
 .gitignore  # if a plugin creates one
 node_modules/
 
-credentials.json
+.credentials.json
+sessions/
