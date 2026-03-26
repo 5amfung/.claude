@@ -2,7 +2,9 @@
   "env": {
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
     "VERCEL_TELEMETRY_DISABLED": "1",
-    "RAILWAY_NO_TELEMETRY": "1"
+    "TURBO_TELEMETRY_DISABLED": "1",
+    "RAILWAY_NO_TELEMETRY": "1",
+    "DO_NOT_TRACK": "1"
   },
   "attribution": {
     "commit": "",
