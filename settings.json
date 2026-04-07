@@ -43,6 +43,7 @@
       "Bash(mkdir:*)",
       "Bash(node:*)",
       "Bash(npm:*)",
+      "Bash(playwright-cli:*)",
       "Bash(pnpm:*)",
       "Bash(ripgrep:*)",
       "Bash(sed:*)",
@@ -54,13 +55,13 @@
       "Bash(which:*)",
       "Read(~/.claude/**)",
       "Read(./**)",
+      "Skill(*)",
       "ToolSearch",
       "WebFetch",
       "WebSearch",
       "Write(//tmp/**)",
       "mcp__mcp-registry__search_mcp_registry",
-      "mcp__plugin_context7_context7__query-docs",
-      "mcp__plugin_context7_context7__resolve-library-id"
+      "mcp__plugin_context7_context7__*"
     ],
     "deny": [
       "Read(./.env)",
@@ -68,7 +69,8 @@
       "Read(./secrets/**)",
       "Read(~/.zshrc)",
       "Write(./.git/**)"
-    ]
+    ],
+    "defaultMode": "acceptEdits"
   },
   "hooks": {
     "PermissionRequest": [
@@ -89,6 +91,17 @@
           {
             "type": "command",
             "command": "osascript -e 'display notification \"Claude needs your approval\" with title \"Claude Code Permission\" sound name \"Glass\"' & afplay /System/Library/Sounds/Glass.aiff &"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude is done\" with title \"Claude Code\" sound name \"Blow\"' & afplay /System/Library/Sounds/Blow.aiff &"
           }
         ]
       }
@@ -117,6 +130,7 @@
     "autoAllowBashIfSandboxed": true,
     "network": {
       "allowedDomains": [
+        "gihub.com",
         "*.github.com",
         "*.githubusercontent.com",
         "*.npmjs.org",
@@ -153,7 +167,7 @@
     "enableWeakerNetworkIsolation": true,
     "excludedCommands": []
   },
-  "effortLevel": "high",
+  "effortLevel": "medium",
   "companyAnnouncements": [
     "🚀🛸🪐👽 woohoo ",
     "🤡 What ya gonna build?",
